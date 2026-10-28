@@ -1,0 +1,665 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_dashboard" name="shell-type"/><title>RADIX Talent Match</title><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600&amp;family=JetBrains+Mono:wght@400;500;600&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={darkMode:"class",theme:{extend:{"colors":{"on-surface-variant":"#45464d","error-container":"#ffdad6","primary-fixed":"#dae2fd","surface":"#f8f9ff","secondary":"#4b41e1","surface-bright":"#f8f9ff","surface-container-low":"#eff4ff","surface-dim":"#cbdbf5","primary":"#000000","primary-container":"#131b2e","on-secondary":"#ffffff","background":"#f8f9ff","on-primary-fixed":"#131b2e","secondary-container":"#645efb","tertiary":"#000000","outline":"#76777d","on-surface":"#0b1c30","surface-tint":"#565e74","surface-container-highest":"#d3e4fe","inverse-surface":"#213145","tertiary-container":"#001f26","primary-fixed-dim":"#bec6e0","on-tertiary":"#ffffff","tertiary-fixed-dim":"#4cd7f6","error":"#ba1a1a","on-secondary-container":"#fffbff","outline-variant":"#c6c6cd","on-secondary-fixed":"#0f0069","on-primary":"#ffffff","tertiary-fixed":"#acedff","surface-container":"#e5eeff","surface-container-lowest":"#ffffff","on-secondary-fixed-variant":"#3323cc","on-error-container":"#93000a","surface-container-high":"#dce9ff","inverse-primary":"#bec6e0","on-background":"#0b1c30","surface-variant":"#d3e4fe","on-error":"#ffffff","on-tertiary-container":"#0090a9","on-tertiary-fixed":"#001f26","secondary-fixed-dim":"#c3c0ff","on-tertiary-fixed-variant":"#004e5c","secondary-fixed":"#e2dfff","on-primary-container":"#7c839b","inverse-on-surface":"#eaf1ff","on-primary-fixed-variant":"#3f465c"},"borderRadius":{"DEFAULT":"0.125rem","lg":"0.25rem","xl":"0.5rem","full":"0.75rem"},"spacing":{"margin-sm":"1rem","gutter-sm":"0.75rem","space-md":"0.75rem","margin-lg":"2rem","space-lg":"1rem","space-xs":"0.25rem","margin":"1.5rem","space-sm":"0.5rem","space-xl":"1.5rem","gutter":"1rem","gutter-lg":"1.5rem"},"fontFamily":{"label-sm":["Geist"],"headline-xl-mobile":["Geist"],"body-sm":["Geist"],"body-md":["Geist"],"headline-sm":["Geist"],"headline-md":["Geist"],"body-lg":["Geist"],"headline-lg":["Geist"],"label-md":["Geist"],"code-metric":["JetBrains Mono"],"code-score":["JetBrains Mono"],"headline-lg-mobile":["Geist"],"headline-xl":["Geist"]},"fontSize":{"label-sm":["11px",{"lineHeight":"14px","letterSpacing":"0.02em","fontWeight":"500"}],"headline-xl-mobile":["26px",{"lineHeight":"32px","letterSpacing":"-0.02em","fontWeight":"600"}],"body-sm":["12px",{"lineHeight":"16px","letterSpacing":"0em","fontWeight":"400"}],"body-md":["13px",{"lineHeight":"18px","letterSpacing":"0em","fontWeight":"400"}],"headline-sm":["15px",{"lineHeight":"20px","letterSpacing":"-0.01em","fontWeight":"600"}],"headline-md":["18px",{"lineHeight":"24px","letterSpacing":"-0.015em","fontWeight":"600"}],"body-lg":["15px",{"lineHeight":"22px","letterSpacing":"-0.005em","fontWeight":"400"}],"headline-lg":["24px",{"lineHeight":"32px","letterSpacing":"-0.02em","fontWeight":"600"}],"label-md":["12px",{"lineHeight":"16px","letterSpacing":"0.01em","fontWeight":"500"}],"code-metric":["12px",{"lineHeight":"16px","letterSpacing":"-0.02em","fontWeight":"500"}],"code-score":["14px",{"lineHeight":"18px","letterSpacing":"-0.03em","fontWeight":"600"}],"headline-lg-mobile":["20px",{"lineHeight":"28px","letterSpacing":"-0.015em","fontWeight":"600"}],"headline-xl":["32px",{"lineHeight":"40px","letterSpacing":"-0.025em","fontWeight":"600"}]}}}};</script></head><body class="bg-surface font-body-md text-on-surface antialiased"><aside class="fixed left-0 top-0 h-screen w-64 bg-primary-container text-on-secondary-container z-50 flex flex-col justify-between shadow-[0_1px_8px_rgba(0,0,0,0.08)]"><div class="flex flex-col"><div class="h-16 flex items-center gap-space-sm px-space-lg bg-inverse-surface/40"><img alt="RADIX Talent Match Logo" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1UM6GiF9JqSntAbqMdNaCYEKHCie8a-ZjAcVCM_806d2E4pnYkaTvWoRFE2fbBPXUtm7LDQ8Dt4VF_juP7BFu3ZFE6AU6WGiAycMo6jEvtBFgQ5i5XYmnG5z3IE_3UXneTHtQup-Jklb7yifZlWH9Q0XDdbZnidjoc3-doUU7IShFuvMrta4o6UYyVvl49GbkctQqFyGd3hBZuWa0RG5w1Jzw5iBYf7TXceuEfgOUto-Z9MQX_LumbistY"/><div class="flex flex-col"><div class="flex items-center gap-space-xs"><span class="font-headline-sm text-headline-sm text-surface tracking-tight uppercase">RADIX</span><span class="font-label-sm text-label-sm px-1.5 py-0.5 rounded bg-secondary text-on-secondary font-code-metric">v2.4</span></div><span class="font-label-sm text-label-sm text-on-primary-container tracking-wider uppercase">Talent Match</span></div></div><div class="px-space-md py-space-sm"><span class="font-label-sm text-label-sm uppercase tracking-wider text-outline px-space-sm">Platform Modules</span></div><nav class="flex flex-col gap-0.5 px-space-sm" data-active-classes="bg-secondary text-on-secondary font-headline-sm shadow-sm"><a class="flex items-center justify-between px-space-md py-space-sm rounded-lg text-on-primary-container hover:bg-inverse-surface hover:text-surface transition-colors" data-path="dashboard" href="#"><div class="flex items-center gap-space-md"><span class="material-symbols-outlined text-base">dashboard</span><span class="font-body-md text-body-md">Dashboard</span></div><span class="font-label-sm text-label-sm text-outline">Overview</span></a><a class="flex items-center justify-between px-space-md py-space-sm rounded-lg text-on-primary-container hover:bg-inverse-surface hover:text-surface transition-colors" data-path="jd-analytics" href="#"><div class="flex items-center gap-space-md"><span class="material-symbols-outlined text-base">description</span><span class="font-body-md text-body-md">JD Analytics</span></div><span class="font-code-metric text-code-metric text-outline">M-01</span></a><a class="flex items-center justify-between px-space-md py-space-sm rounded-lg text-on-primary-container hover:bg-inverse-surface hover:text-surface transition-colors" data-path="resume-parsing" href="#"><div class="flex items-center gap-space-md"><span class="material-symbols-outlined text-base">document_scanner</span><span class="font-body-md text-body-md">Resume Parsing</span></div><span class="font-code-metric text-code-metric text-outline">M-02</span></a><a class="flex items-center justify-between px-space-md py-space-sm rounded-lg text-on-primary-container hover:bg-inverse-surface hover:text-surface transition-colors" data-path="profile-builder" href="#"><div class="flex items-center gap-space-md"><span class="material-symbols-outlined text-base">badge</span><span class="font-body-md text-body-md">Profile Builder</span></div><span class="font-code-metric text-code-metric text-outline">M-03</span></a><a class="flex items-center justify-between px-space-md py-space-sm rounded-lg text-on-primary-container hover:bg-inverse-surface hover:text-surface transition-colors" data-path="talent-check" href="#"><div class="flex items-center gap-space-md"><span class="material-symbols-outlined text-base">verified_user</span><span class="font-body-md text-body-md">Talent Check</span></div><span class="font-code-metric text-code-metric text-outline">M-04</span></a><a aria-current="page" class="flex items-center justify-between px-space-md py-space-sm rounded-lg transition-colors bg-secondary text-on-secondary font-headline-sm shadow-sm" data-path="skillsight-ai" href="#"><div class="flex items-center gap-space-md"><span class="material-symbols-outlined text-base text-tertiary-fixed-dim">psychology</span><span class="font-headline-sm text-body-md text-surface">SkillSight AI</span></div><span class="font-label-sm text-label-sm px-1.5 py-0.5 rounded-full bg-secondary-container text-on-secondary-container font-code-metric">ENGINE</span></a><a class="flex items-center justify-between px-space-md py-space-sm rounded-lg text-on-primary-container hover:bg-inverse-surface hover:text-surface transition-colors" data-path="candidate-comparison" href="#"><div class="flex items-center gap-space-md"><span class="material-symbols-outlined text-base">compare_arrows</span><span class="font-body-md text-body-md">Candidate Comparison</span></div></a><a class="flex items-center justify-between px-space-md py-space-sm rounded-lg text-on-primary-container hover:bg-inverse-surface hover:text-surface transition-colors" data-path="job-directory" href="#"><div class="flex items-center gap-space-md"><span class="material-symbols-outlined text-base">work_outline</span><span class="font-body-md text-body-md">Job Directory</span></div></a><a class="flex items-center justify-between px-space-md py-space-sm rounded-lg text-on-primary-container hover:bg-inverse-surface hover:text-surface transition-colors" data-path="analytics-and-reports" href="#"><div class="flex items-center gap-space-md"><span class="material-symbols-outlined text-base">insights</span><span class="font-body-md text-body-md">Analytics &amp; Reports</span></div></a></nav></div><div class="flex flex-col gap-space-sm p-space-md bg-inverse-surface/30"><div class="flex items-center justify-between px-space-sm py-1.5 rounded-lg bg-primary-container/80"><div class="flex items-center gap-space-xs"><span class="w-2 h-2 rounded-full bg-tertiary-fixed-dim animate-pulse"></span><span class="font-label-sm text-label-sm text-surface">Engines Online</span></div><span class="font-code-metric text-code-metric text-outline-variant">42ms</span></div><div class="flex flex-col gap-0.5"><a class="flex items-center gap-space-md px-space-sm py-1.5 rounded-lg text-on-primary-container hover:bg-inverse-surface hover:text-surface transition-colors" data-path="documentation-and-api" href="#"><span class="material-symbols-outlined text-base">terminal</span><span class="font-body-sm text-body-sm">Documentation &amp; API</span></a><a class="flex items-center gap-space-md px-space-sm py-1.5 rounded-lg text-on-primary-container hover:bg-inverse-surface hover:text-surface transition-colors" data-path="settings-and-team" href="#"><span class="material-symbols-outlined text-base">settings</span><span class="font-body-sm text-body-sm">Settings &amp; Team</span></a></div></div></aside><div class="pl-64"><header class="fixed top-0 left-64 right-0 h-16 bg-surface-container-lowest/90 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)] z-40 flex items-center justify-between px-space-lg"><div class="flex items-center gap-space-md"><div class="flex items-center gap-space-xs text-on-surface-variant font-label-md text-label-md"><span class="hover:text-on-surface transition-colors cursor-pointer">Platform</span><span class="text-outline-variant">/</span><span class="text-on-surface font-headline-sm">Workspace</span></div><div class="relative flex items-center ml-space-md"><span class="material-symbols-outlined absolute left-space-md text-outline text-base pointer-events-none">search</span><input class="w-72 pl-9 pr-12 py-1.5 rounded-lg bg-surface-container text-on-surface placeholder:text-outline font-body-sm text-body-sm focus:outline-none focus:ring-1 focus:ring-secondary transition-all" placeholder="Search candidates, skills, jobs..." type="text"/><span class="absolute right-space-sm px-1.5 py-0.5 rounded bg-surface-container-highest text-on-surface-variant font-code-metric text-label-sm pointer-events-none">⌘K</span></div></div><div class="flex items-center gap-space-lg"><div class="flex items-center bg-surface-container-low p-0.5 rounded-lg"><button class="px-space-md py-1 rounded text-on-surface bg-surface-container-lowest shadow-sm font-label-sm text-label-sm" type="button">Recruiter View</button><button class="px-space-md py-1 rounded text-on-surface-variant hover:text-on-surface font-label-sm text-label-sm transition-colors" type="button">Admin View</button></div><button class="relative p-1.5 rounded-lg text-on-surface-variant hover:text-on-surface hover:bg-surface-container transition-colors" type="button"><span class="material-symbols-outlined text-xl">notifications</span><span class="absolute top-1 right-1 w-2 h-2 rounded-full bg-error ring-2 ring-surface-container-lowest"></span></button><button class="flex items-center gap-space-xs px-space-md py-1.5 rounded-lg bg-primary text-on-primary hover:bg-inverse-surface font-label-md text-label-md shadow-sm transition-colors" type="button"><span class="material-symbols-outlined text-base">add</span><span>New Evaluation</span></button><div class="flex items-center gap-space-sm pl-space-sm"><img alt="Profile" class="w-8 h-8 rounded-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB07-JTmgS2eClS1P2pWXJe9scMCu6Ap_nideXNlytbVD_VbbRhwaGxWnG-39fVXZj_AhxLPu8Y9u59Haxywx1l3AEjWE2wDgNFcSbAEfTiCvLiCFO-qHSy0Qn-KH3etffdDAlN3DaVnCc6VzdNAsN08WZVgZhlL1oHxH765peFNdhT6bvDv4R8FpSdi7jylrcjtHsNhjs6FCTM24f1iAJ3RKWlmAEtNhKpl5KeGt3Lo1mUdr6lRLNT"/><div class="flex flex-col text-left"><span class="font-headline-sm text-label-md text-on-surface leading-tight">Sarah Jenkins</span><span class="font-body-sm text-label-sm text-on-surface-variant leading-tight">Senior Talent Lead</span></div></div></div></header><main class="w-full pt-16 bg-surface px-space-lg min-h-screen"><div class="flex flex-col w-full pb-16 space-y-8">
+<!-- Top Context Header Bar -->
+<section class="flex flex-col xl:flex-row items-start xl:items-center justify-between gap-4 p-6 rounded-xl bg-surface-container-lowest shadow-sm">
+<div class="flex flex-wrap items-center gap-4">
+<!-- Candidate Selector Badge -->
+<div class="flex items-center gap-3 bg-surface-container-low px-4 py-2.5 rounded-lg">
+<div class="relative w-10 h-10 rounded-full overflow-hidden bg-surface-container-highest shrink-0">
+<img class="w-full h-full object-cover" data-alt="Professional studio portrait of Ananya Sharma, young female software engineer with thoughtful expression, sharp corporate tech lighting, high key, neutral slate blue background." src="https://lh3.googleusercontent.com/aida-public/AB6AXuC9zZcfP0nHLN9H8zwrAQQcWYiepuUdg-fhJCy-MBO1B1TlcszmvOPHpacGmTdxFRLPX--dzPfTwW5ZwvWMRGi9RB3PQqKEzVEZuOWyUSeR53J8atx3dpRb1z2uU68YtKKWChbR1PTE8F_WzO8ff2ncS7H7j91sQMk8QHy4yVsO5WTIVjMHEs--EWqwRN9hRy5Kio2fWyQyQ1_Pj6gAm3kpMTf3VA8RfB34vkm7A5gu98In8Zd5lFmm"/>
+</div>
+<div class="flex flex-col">
+<div class="flex items-center gap-2">
+<span class="font-headline-sm text-headline-sm text-on-surface">Ananya Sharma</span>
+<span class="font-code-metric text-code-metric px-2 py-0.5 rounded-full bg-secondary-container text-on-secondary-container font-semibold">FRESHER</span>
+</div>
+<span class="font-body-sm text-body-sm text-on-surface-variant">B.Tech Computer Science · Class of 2024</span>
+</div>
+</div>
+<div class="hidden sm:flex text-outline-variant font-code-metric text-headline-sm">⇄</div>
+<!-- Target Job Selector Badge -->
+<div class="flex items-center gap-3 bg-surface-container-low px-4 py-2.5 rounded-lg">
+<div class="w-10 h-10 rounded-lg bg-surface-container-highest flex items-center justify-center text-secondary font-headline-sm shrink-0">
+<span class="material-symbols-outlined text-secondary text-2xl">terminal</span>
+</div>
+<div class="flex flex-col">
+<div class="flex items-center gap-2">
+<span class="font-headline-sm text-headline-sm text-on-surface">Python Developer</span>
+<span class="font-label-sm text-label-sm px-2 py-0.5 rounded bg-surface-container-highest text-on-surface-variant">Mountain View / Hybrid</span>
+</div>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Google · Core Platform &amp; AI Services</span>
+</div>
+</div>
+<div class="flex items-center gap-2 px-3 py-1.5 rounded-lg bg-surface-container text-on-surface-variant">
+<span class="w-2 h-2 rounded-full bg-tertiary-fixed-dim"></span>
+<span class="font-code-metric text-code-metric">Explainable Matrix v2.1</span>
+</div>
+</div>
+<!-- Global CTAs -->
+<div class="flex flex-wrap items-center gap-2 w-full xl:w-auto justify-end">
+<button class="flex items-center gap-2 px-3.5 py-2 rounded-lg bg-surface-container text-on-surface hover:bg-surface-container-high transition-colors font-label-md text-label-md" type="button">
+<span class="material-symbols-outlined text-base">file_open</span>
+<span>Original Resume</span>
+</button>
+<button class="flex items-center gap-2 px-3.5 py-2 rounded-lg bg-surface-container text-on-surface hover:bg-surface-container-high transition-colors font-label-md text-label-md" type="button">
+<span class="material-symbols-outlined text-base">ios_share</span>
+<span>Share with Hiring Team</span>
+</button>
+<button class="flex items-center gap-2 px-4 py-2 rounded-lg bg-secondary text-on-secondary hover:bg-secondary-container transition-colors shadow-sm font-label-md text-label-md" type="button">
+<span class="material-symbols-outlined text-base">download</span>
+<span>Export Talent Audit</span>
+</button>
+</div>
+</section>
+<!-- Top Score Hero Banner (3-Column Bento) -->
+<section class="grid grid-cols-1 lg:grid-cols-12 gap-6">
+<!-- Box 1: Radial AI Engine Gauge -->
+<div class="lg:col-span-4 bg-surface-container-lowest p-6 rounded-xl shadow-sm flex flex-col justify-between relative overflow-hidden">
+<div class="flex items-center justify-between mb-4">
+<div>
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-outline">Telemetry Verdict</span>
+<h2 class="font-headline-md text-headline-md text-on-surface mt-0.5">Overall Fit Ratio</h2>
+</div>
+<span class="font-label-sm text-label-sm px-2.5 py-1 rounded-full bg-surface-container-high text-secondary font-code-metric font-semibold">Tier 2 Match</span>
+</div>
+<div class="flex items-center justify-center my-4 relative">
+<!-- SVG Dual Arc Gauge (60% Match) -->
+<div class="relative w-44 h-44 flex items-center justify-center">
+<svg class="w-full h-full -rotate-90" viewbox="0 0 120 120">
+<!-- Background ring track -->
+<circle class="text-surface-container" cx="60" cy="60" fill="none" r="50" stroke="currentColor" stroke-width="8"></circle>
+<!-- 60% Active Stroke: 2 * PI * 50 = 314.159 -> dasharray 314.16, dashoffset 125.66 -->
+<circle class="text-secondary transition-all duration-700" cx="60" cy="60" fill="none" r="50" stroke="currentColor" stroke-dasharray="314.16" stroke-dashoffset="125.66" stroke-linecap="round" stroke-width="8"></circle>
+</svg>
+<div class="absolute inset-0 flex flex-col items-center justify-center text-center">
+<span class="font-headline-xl text-headline-xl text-on-surface tracking-tighter" id="radialMainScore">60.0%</span>
+<span class="font-code-metric text-code-metric text-on-surface-variant font-medium">MODERATE FIT</span>
+</div>
+</div>
+</div>
+<div class="grid grid-cols-2 gap-3 pt-4 bg-surface-container-low p-3 rounded-lg">
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-on-surface-variant">Required (70% Wt.)</span>
+<div class="flex items-center gap-1.5 mt-0.5">
+<span class="font-code-score text-code-score text-on-surface">75.0%</span>
+<span class="font-code-metric text-code-metric text-outline-variant font-normal">3/4 hits</span>
+</div>
+</div>
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-on-surface-variant">Preferred (30% Wt.)</span>
+<div class="flex items-center gap-1.5 mt-0.5">
+<span class="font-code-score text-code-score text-on-surface">25.0%</span>
+<span class="font-code-metric text-code-metric text-outline-variant font-normal">1/4 hits</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Box 2: Transparent Formula Explainer -->
+<div class="lg:col-span-5 bg-surface-container-lowest p-6 rounded-xl shadow-sm flex flex-col justify-between">
+<div>
+<div class="flex items-center justify-between pb-3">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary text-xl">functions</span>
+<h2 class="font-headline-md text-headline-md text-on-surface">Mathematical Transparency</h2>
+</div>
+<span class="font-code-metric text-label-sm text-outline px-2 py-0.5 rounded bg-surface-container">Deterministic Audit</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant mt-1">
+          Zero opaque heuristics. RADIX evaluates candidacy purely via strict linear coefficient weighting between mandatory qualifications and functional differentiators.
+        </p>
+</div>
+<!-- Formula breakdown visual card -->
+<div class="my-4 p-4 rounded-lg bg-surface-container-low space-y-3 font-code-metric">
+<div class="flex items-center justify-between text-body-sm text-on-surface-variant">
+<span>Formula:</span>
+<span class="text-on-surface font-semibold">(Req % × 0.70) + (Pref % × 0.30) = Final</span>
+</div>
+<div class="p-3 rounded bg-surface-container-lowest shadow-sm flex flex-col gap-2">
+<div class="flex items-center justify-between font-label-md text-label-md">
+<span class="text-on-surface-variant">Required Weight (70%):</span>
+<span class="text-on-surface font-semibold">75.0% × 0.70 = <strong class="text-secondary font-headline-sm">52.5%</strong></span>
+</div>
+<div class="flex items-center justify-between font-label-md text-label-md">
+<span class="text-on-surface-variant">Preferred Weight (30%):</span>
+<span class="text-on-surface font-semibold">25.0% × 0.30 = <strong class="text-secondary font-headline-sm">7.5%</strong></span>
+</div>
+</div>
+<div class="flex items-center justify-between pt-1">
+<span class="font-body-sm text-body-sm text-on-surface font-semibold">Calculated Score:</span>
+<span class="font-code-score text-code-score text-secondary font-semibold">52.5% + 7.5% = 60.0%</span>
+</div>
+</div>
+<div class="flex items-center gap-2 text-on-surface-variant font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-sm text-secondary">verified</span>
+<span>Confidence Margin: 99.4% · Grounded in verifiable resume text units</span>
+</div>
+</div>
+<!-- Box 3: Candidate Summary & Fit Breakdown -->
+<div class="lg:col-span-3 bg-surface-container-lowest p-6 rounded-xl shadow-sm flex flex-col justify-between">
+<div>
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-outline">Talent Persona</span>
+<h2 class="font-headline-md text-headline-md text-on-surface mt-0.5">High Upskill Potential</h2>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-2">
+          Academic foundation in Core CS (Data Structures, OOP, SQL) demonstrates rapid acquisition velocity.
+        </p>
+</div>
+<div class="space-y-3 my-4">
+<div class="flex items-center justify-between p-2.5 rounded-lg bg-surface-container-low">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary text-base">school</span>
+<span class="font-label-md text-label-md text-on-surface">Academic Profile</span>
+</div>
+<span class="font-code-metric text-label-sm text-on-surface font-semibold">CS Graduate</span>
+</div>
+<div class="flex items-center justify-between p-2.5 rounded-lg bg-surface-container-low">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary-container text-base">trending_up</span>
+<span class="font-label-md text-label-md text-on-surface">Learning Velocity</span>
+</div>
+<span class="font-code-metric text-label-sm text-secondary font-semibold">Top 15th Pct.</span>
+</div>
+<div class="flex items-center justify-between p-2.5 rounded-lg bg-surface-container-low">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-error text-base">report_problem</span>
+<span class="font-label-md text-label-md text-on-surface">Primary Blocker</span>
+</div>
+<span class="font-code-metric text-label-sm text-error font-semibold">Machine Learning</span>
+</div>
+</div>
+<div class="bg-surface-container p-3 rounded-lg">
+<span class="font-label-sm text-label-sm text-on-surface-variant block mb-1">Recommendation</span>
+<p class="font-body-sm text-body-sm text-on-surface">Fast-track to technical screening with junior onboarding support package.</p>
+</div>
+</div>
+</section>
+<!-- Skill Comparison & Evidence Matrix (Table) -->
+<section class="bg-surface-container-lowest rounded-xl shadow-sm overflow-hidden">
+<div class="p-6 flex flex-col md:flex-row md:items-center justify-between gap-4">
+<div>
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary text-xl">dataset</span>
+<h3 class="font-headline-md text-headline-md text-on-surface">Skill Comparison &amp; Evidence Matrix</h3>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1">Direct linguistic semantic mapping from Ananya's parsed documentation.</p>
+</div>
+<div class="flex items-center gap-2">
+<span class="font-label-sm text-label-sm px-2.5 py-1 rounded-full bg-surface-container text-on-surface font-code-metric">Total: 8 Skills</span>
+<span class="font-label-sm text-label-sm px-2.5 py-1 rounded-full bg-surface-container-low text-secondary font-code-metric">4 Matched</span>
+<span class="font-label-sm text-label-sm px-2.5 py-1 rounded-full bg-error-container text-on-error-container font-code-metric">4 Missing</span>
+</div>
+</div>
+<!-- Matrix Table -->
+<div class="w-full overflow-x-auto">
+<table class="w-full text-left">
+<thead>
+<tr class="bg-surface-container-low text-on-surface-variant font-label-sm text-label-sm uppercase tracking-wider">
+<th class="py-3 px-6">Skill Name</th>
+<th class="py-3 px-4">Classification</th>
+<th class="py-3 px-4">Engine Weight</th>
+<th class="py-3 px-4">Status</th>
+<th class="py-3 px-6">Extracted Resume Evidence</th>
+<th class="py-3 px-4">Gap Severity</th>
+</tr>
+</thead>
+<tbody class="divide-y divide-surface-container font-body-md text-body-md">
+<!-- Python -->
+<tr class="hover:bg-surface-container-low/60 transition-colors">
+<td class="py-3.5 px-6 font-semibold text-on-surface flex items-center gap-2">
+<span class="w-2 h-2 rounded-full bg-secondary"></span>
+              Python
+            </td>
+<td class="py-3.5 px-4">
+<span class="font-code-metric text-label-sm px-2 py-0.5 rounded bg-surface-container-high text-on-surface">Required</span>
+</td>
+<td class="py-3.5 px-4 font-code-metric text-code-metric text-on-surface">17.50%</td>
+<td class="py-3.5 px-4">
+<span class="inline-flex items-center gap-1 font-label-sm text-label-sm px-2 py-0.5 rounded-full bg-surface-container-lowest text-secondary font-semibold shadow-sm">
+<span class="material-symbols-outlined text-xs">check_circle</span> MATCHED
+              </span>
+</td>
+<td class="py-3.5 px-6 text-on-surface-variant italic font-code-metric text-body-sm">
+              "Student Management System using Python and SQL"
+            </td>
+<td class="py-3.5 px-4">
+<span class="font-code-metric text-label-sm text-outline">None (Cleared)</span>
+</td>
+</tr>
+<!-- Java -->
+<tr class="hover:bg-surface-container-low/60 transition-colors">
+<td class="py-3.5 px-6 font-semibold text-on-surface flex items-center gap-2">
+<span class="w-2 h-2 rounded-full bg-secondary"></span>
+              Java
+            </td>
+<td class="py-3.5 px-4">
+<span class="font-code-metric text-label-sm px-2 py-0.5 rounded bg-surface-container-high text-on-surface">Required</span>
+</td>
+<td class="py-3.5 px-4 font-code-metric text-code-metric text-on-surface">17.50%</td>
+<td class="py-3.5 px-4">
+<span class="inline-flex items-center gap-1 font-label-sm text-label-sm px-2 py-0.5 rounded-full bg-surface-container-lowest text-secondary font-semibold shadow-sm">
+<span class="material-symbols-outlined text-xs">check_circle</span> MATCHED
+              </span>
+</td>
+<td class="py-3.5 px-6 text-on-surface-variant italic font-code-metric text-body-sm">
+              "Coursework &amp; Object-Oriented Programming labs"
+            </td>
+<td class="py-3.5 px-4">
+<span class="font-code-metric text-label-sm text-outline">None (Cleared)</span>
+</td>
+</tr>
+<!-- SQL -->
+<tr class="hover:bg-surface-container-low/60 transition-colors">
+<td class="py-3.5 px-6 font-semibold text-on-surface flex items-center gap-2">
+<span class="w-2 h-2 rounded-full bg-secondary"></span>
+              SQL
+            </td>
+<td class="py-3.5 px-4">
+<span class="font-code-metric text-label-sm px-2 py-0.5 rounded bg-surface-container-high text-on-surface">Required</span>
+</td>
+<td class="py-3.5 px-4 font-code-metric text-code-metric text-on-surface">17.50%</td>
+<td class="py-3.5 px-4">
+<span class="inline-flex items-center gap-1 font-label-sm text-label-sm px-2 py-0.5 rounded-full bg-surface-container-lowest text-secondary font-semibold shadow-sm">
+<span class="material-symbols-outlined text-xs">check_circle</span> MATCHED
+              </span>
+</td>
+<td class="py-3.5 px-6 text-on-surface-variant italic font-code-metric text-body-sm">
+              "Student Management System database schema design"
+            </td>
+<td class="py-3.5 px-4">
+<span class="font-code-metric text-label-sm text-outline">None (Cleared)</span>
+</td>
+</tr>
+<!-- Machine Learning -->
+<tr class="bg-error-container/20 hover:bg-error-container/30 transition-colors">
+<td class="py-3.5 px-6 font-semibold text-error flex items-center gap-2">
+<span class="w-2 h-2 rounded-full bg-error"></span>
+              Machine Learning
+            </td>
+<td class="py-3.5 px-4">
+<span class="font-code-metric text-label-sm px-2 py-0.5 rounded bg-surface-container-high text-on-surface">Required</span>
+</td>
+<td class="py-3.5 px-4 font-code-metric text-code-metric text-on-surface">17.50%</td>
+<td class="py-3.5 px-4">
+<span class="inline-flex items-center gap-1 font-label-sm text-label-sm px-2 py-0.5 rounded-full bg-error-container text-on-error-container font-semibold">
+<span class="material-symbols-outlined text-xs">close</span> MISSING
+              </span>
+</td>
+<td class="py-3.5 px-6 text-outline italic font-body-sm">
+              No project records or academic credits found
+            </td>
+<td class="py-3.5 px-4">
+<span class="font-label-sm text-label-sm px-2 py-0.5 rounded bg-error-container text-on-error-container font-semibold">Critical · High</span>
+</td>
+</tr>
+<!-- Git -->
+<tr class="hover:bg-surface-container-low/60 transition-colors">
+<td class="py-3.5 px-6 font-semibold text-on-surface flex items-center gap-2">
+<span class="w-2 h-2 rounded-full bg-tertiary-fixed-dim"></span>
+              Git
+            </td>
+<td class="py-3.5 px-4">
+<span class="font-code-metric text-label-sm px-2 py-0.5 rounded bg-surface-container text-outline">Preferred</span>
+</td>
+<td class="py-3.5 px-4 font-code-metric text-code-metric text-on-surface">7.50%</td>
+<td class="py-3.5 px-4">
+<span class="inline-flex items-center gap-1 font-label-sm text-label-sm px-2 py-0.5 rounded-full bg-surface-container-lowest text-secondary font-semibold shadow-sm">
+<span class="material-symbols-outlined text-xs">check_circle</span> MATCHED
+              </span>
+</td>
+<td class="py-3.5 px-6 text-on-surface-variant italic font-code-metric text-body-sm">
+              "Git version control for open-source project submissions"
+            </td>
+<td class="py-3.5 px-4">
+<span class="font-code-metric text-label-sm text-outline">None (Cleared)</span>
+</td>
+</tr>
+<!-- AWS -->
+<tr class="hover:bg-surface-container-low/60 transition-colors">
+<td class="py-3.5 px-6 font-medium text-on-surface flex items-center gap-2">
+<span class="w-2 h-2 rounded-full bg-outline-variant"></span>
+              AWS
+            </td>
+<td class="py-3.5 px-4">
+<span class="font-code-metric text-label-sm px-2 py-0.5 rounded bg-surface-container text-outline">Preferred</span>
+</td>
+<td class="py-3.5 px-4 font-code-metric text-code-metric text-on-surface">7.50%</td>
+<td class="py-3.5 px-4">
+<span class="inline-flex items-center gap-1 font-label-sm text-label-sm px-2 py-0.5 rounded-full bg-surface-container-high text-on-surface-variant">
+<span class="material-symbols-outlined text-xs">horizontal_rule</span> MISSING
+              </span>
+</td>
+<td class="py-3.5 px-6 text-outline italic font-body-sm">
+              Zero cloud infrastructure deployment detected
+            </td>
+<td class="py-3.5 px-4">
+<span class="font-label-sm text-label-sm px-2 py-0.5 rounded bg-surface-container-high text-on-surface font-medium">Medium</span>
+</td>
+</tr>
+<!-- Docker -->
+<tr class="hover:bg-surface-container-low/60 transition-colors">
+<td class="py-3.5 px-6 font-medium text-on-surface flex items-center gap-2">
+<span class="w-2 h-2 rounded-full bg-outline-variant"></span>
+              Docker
+            </td>
+<td class="py-3.5 px-4">
+<span class="font-code-metric text-label-sm px-2 py-0.5 rounded bg-surface-container text-outline">Preferred</span>
+</td>
+<td class="py-3.5 px-4 font-code-metric text-code-metric text-on-surface">7.50%</td>
+<td class="py-3.5 px-4">
+<span class="inline-flex items-center gap-1 font-label-sm text-label-sm px-2 py-0.5 rounded-full bg-surface-container-high text-on-surface-variant">
+<span class="material-symbols-outlined text-xs">horizontal_rule</span> MISSING
+              </span>
+</td>
+<td class="py-3.5 px-6 text-outline italic font-body-sm">
+              No container manifests or Dockerfiles found
+            </td>
+<td class="py-3.5 px-4">
+<span class="font-label-sm text-label-sm px-2 py-0.5 rounded bg-surface-container-high text-on-surface font-medium">Medium</span>
+</td>
+</tr>
+<!-- Communication Skills -->
+<tr class="hover:bg-surface-container-low/60 transition-colors">
+<td class="py-3.5 px-6 font-medium text-on-surface flex items-center gap-2">
+<span class="w-2 h-2 rounded-full bg-outline-variant"></span>
+              Communication Skills
+            </td>
+<td class="py-3.5 px-4">
+<span class="font-code-metric text-label-sm px-2 py-0.5 rounded bg-surface-container text-outline">Preferred</span>
+</td>
+<td class="py-3.5 px-4 font-code-metric text-code-metric text-on-surface">7.50%</td>
+<td class="py-3.5 px-4">
+<span class="inline-flex items-center gap-1 font-label-sm text-label-sm px-2 py-0.5 rounded-full bg-surface-container text-outline">
+<span class="material-symbols-outlined text-xs">remove</span> NOT DETECTED
+              </span>
+</td>
+<td class="py-3.5 px-6 text-outline italic font-body-sm">
+              Insufficient behavioral context in parsed profile
+            </td>
+<td class="py-3.5 px-4">
+<span class="font-label-sm text-label-sm px-2 py-0.5 rounded bg-surface-container text-outline">Low</span>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
+<!-- Interactive "What-If Score Simulator" Sandbox -->
+<section class="bg-primary-container text-on-secondary-container p-6 rounded-xl shadow-lg relative overflow-hidden">
+<div class="flex flex-col md:flex-row md:items-center justify-between gap-4 mb-6 relative z-10">
+<div>
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-tertiary-fixed-dim text-2xl">science</span>
+<h3 class="font-headline-lg text-headline-lg text-surface">Hypothetical Acquisition Sandbox</h3>
+</div>
+<p class="font-body-sm text-body-sm text-on-primary-container mt-1">
+          Simulate score uplift by modeling fast-track skill acquisition sprints for Ananya Sharma.
+        </p>
+</div>
+<div class="px-3 py-1 rounded bg-inverse-surface font-code-metric text-label-sm text-tertiary-fixed-dim tracking-wider uppercase">
+        HYPOTHETICAL SIMULATION
+      </div>
+</div>
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-6 items-center relative z-10">
+<!-- Checkbox Controls -->
+<div class="lg:col-span-7 space-y-3">
+<label class="flex items-center justify-between p-3.5 rounded-lg bg-inverse-surface/60 hover:bg-inverse-surface cursor-pointer transition-colors">
+<div class="flex items-center gap-3">
+<input class="w-4 h-4 rounded text-secondary focus:ring-0 cursor-pointer" id="simML" onchange="runScoreSimulator()" type="checkbox"/>
+<div class="flex flex-col">
+<span class="font-headline-sm text-headline-sm text-surface">Acquire Machine Learning</span>
+<span class="font-body-sm text-body-sm text-on-primary-container">Google ML Crash Course + Basic PyTorch Pipelines</span>
+</div>
+</div>
+<span class="font-code-score text-code-score text-tertiary-fixed-dim font-bold">+17.5%</span>
+</label>
+<label class="flex items-center justify-between p-3.5 rounded-lg bg-inverse-surface/60 hover:bg-inverse-surface cursor-pointer transition-colors">
+<div class="flex items-center gap-3">
+<input class="w-4 h-4 rounded text-secondary focus:ring-0 cursor-pointer" id="simAWS" onchange="runScoreSimulator()" type="checkbox"/>
+<div class="flex flex-col">
+<span class="font-headline-sm text-headline-sm text-surface">Acquire AWS (Core Services)</span>
+<span class="font-body-sm text-body-sm text-on-primary-container">Cloud Practitioner, EC2 compute &amp; S3 storage architecture</span>
+</div>
+</div>
+<span class="font-code-score text-code-score text-tertiary-fixed-dim font-bold">+7.5%</span>
+</label>
+<label class="flex items-center justify-between p-3.5 rounded-lg bg-inverse-surface/60 hover:bg-inverse-surface cursor-pointer transition-colors">
+<div class="flex items-center gap-3">
+<input class="w-4 h-4 rounded text-secondary focus:ring-0 cursor-pointer" id="simDocker" onchange="runScoreSimulator()" type="checkbox"/>
+<div class="flex flex-col">
+<span class="font-headline-sm text-headline-sm text-surface">Acquire Docker Containerization</span>
+<span class="font-body-sm text-body-sm text-on-primary-container">Dockerfiles, Compose environments for Python Flask/FastAPI</span>
+</div>
+</div>
+<span class="font-code-score text-code-score text-tertiary-fixed-dim font-bold">+7.5%</span>
+</label>
+</div>
+<!-- Realtime Simulated Output Gauge -->
+<div class="lg:col-span-5 bg-inverse-surface/80 p-6 rounded-xl flex flex-col items-center justify-center text-center shadow-inner">
+<span class="font-label-sm text-label-sm text-on-primary-container uppercase tracking-wider">Projected Match Velocity</span>
+<div class="flex items-baseline gap-2 my-2">
+<span class="font-code-metric text-headline-lg text-outline-variant line-through">60.0%</span>
+<span class="text-tertiary-fixed-dim font-headline-sm">→</span>
+<span class="font-headline-xl text-headline-xl text-surface font-bold text-tertiary-fixed" id="simulatedResult">60.0%</span>
+</div>
+<div class="font-code-metric text-label-md px-3 py-1 rounded-full bg-primary-container text-on-primary-container" id="simTierLabel">
+          Baseline Tier 2 Candidate
+        </div>
+<p class="font-body-sm text-body-sm text-on-primary-container mt-4" id="simNarrative">
+          Select learning pathways to project Ananya's placement readiness.
+        </p>
+</div>
+</div>
+</section>
+<!-- Skill Gap Analysis & Personalized Roadmap -->
+<section class="space-y-4">
+<div class="flex items-center justify-between">
+<div>
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary text-xl">conversion_path</span>
+<h3 class="font-headline-md text-headline-md text-on-surface">Targeted Upskill Acceleration Plan</h3>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">Estimated time-to-clearance for Google Python Developer specifications.</p>
+</div>
+<span class="font-label-sm text-label-sm px-3 py-1 rounded bg-surface-container font-code-metric text-on-surface">Estimated Ramp: 7-11 Weeks</span>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+<!-- High Priority: Machine Learning -->
+<div class="bg-surface-container-lowest p-6 rounded-xl shadow-sm flex flex-col justify-between">
+<div>
+<div class="flex items-center justify-between mb-3">
+<span class="font-label-sm text-label-sm px-2 py-0.5 rounded bg-error-container text-on-error-container font-semibold">HIGH PRIORITY</span>
+<span class="font-code-metric text-label-sm text-outline">Est. 4-6 weeks</span>
+</div>
+<h4 class="font-headline-md text-headline-md text-on-surface">Machine Learning Foundations</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-2">
+            Critical gap for Google AI Services team. Transition from theoretical CS math into applied inference scripting.
+          </p>
+<div class="mt-4 p-3 bg-surface-container-low rounded-lg space-y-1.5">
+<span class="font-label-sm text-label-sm text-on-surface font-semibold block">Curated Materials:</span>
+<div class="flex items-center gap-2 font-body-sm text-body-sm text-secondary">
+<span class="material-symbols-outlined text-sm">menu_book</span> Google Machine Learning Crash Course
+            </div>
+<div class="flex items-center gap-2 font-body-sm text-body-sm text-secondary">
+<span class="material-symbols-outlined text-sm">code</span> PyTorch Tensors &amp; Basic Regression Labs
+            </div>
+</div>
+</div>
+<div class="pt-4 mt-4 flex items-center justify-between text-on-surface-variant font-label-sm text-label-sm">
+<span>Score Delta:</span>
+<span class="font-code-score text-code-score text-secondary font-bold">+17.5%</span>
+</div>
+</div>
+<!-- Medium Priority: AWS -->
+<div class="bg-surface-container-lowest p-6 rounded-xl shadow-sm flex flex-col justify-between">
+<div>
+<div class="flex items-center justify-between mb-3">
+<span class="font-label-sm text-label-sm px-2 py-0.5 rounded bg-surface-container-high text-on-surface font-semibold">MEDIUM PRIORITY</span>
+<span class="font-code-metric text-label-sm text-outline">Est. 2-3 weeks</span>
+</div>
+<h4 class="font-headline-md text-headline-md text-on-surface">AWS Cloud Architecture</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-2">
+            Cloud infrastructure operationalization. Understand distributed deployment patterns and object storage.
+          </p>
+<div class="mt-4 p-3 bg-surface-container-low rounded-lg space-y-1.5">
+<span class="font-label-sm text-label-sm text-on-surface font-semibold block">Curated Materials:</span>
+<div class="flex items-center gap-2 font-body-sm text-body-sm text-secondary">
+<span class="material-symbols-outlined text-sm">cloud</span> AWS Certified Cloud Practitioner
+            </div>
+<div class="flex items-center gap-2 font-body-sm text-body-sm text-secondary">
+<span class="material-symbols-outlined text-sm">layers</span> EC2 Provisioning, IAM Roles &amp; S3 CLI
+            </div>
+</div>
+</div>
+<div class="pt-4 mt-4 flex items-center justify-between text-on-surface-variant font-label-sm text-label-sm">
+<span>Score Delta:</span>
+<span class="font-code-score text-code-score text-secondary font-bold">+7.5%</span>
+</div>
+</div>
+<!-- Medium Priority: Docker -->
+<div class="bg-surface-container-lowest p-6 rounded-xl shadow-sm flex flex-col justify-between">
+<div>
+<div class="flex items-center justify-between mb-3">
+<span class="font-label-sm text-label-sm px-2 py-0.5 rounded bg-surface-container-high text-on-surface font-semibold">MEDIUM PRIORITY</span>
+<span class="font-code-metric text-label-sm text-outline">Est. 1-2 weeks</span>
+</div>
+<h4 class="font-headline-md text-headline-md text-on-surface">Containerization &amp; Docker</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-2">
+            Package Python runtime dependencies uniformly for staging and cluster deployment in production.
+          </p>
+<div class="mt-4 p-3 bg-surface-container-low rounded-lg space-y-1.5">
+<span class="font-label-sm text-label-sm text-on-surface font-semibold block">Curated Materials:</span>
+<div class="flex items-center gap-2 font-body-sm text-body-sm text-secondary">
+<span class="material-symbols-outlined text-sm">widgets</span> Containerizing Python Web Services
+            </div>
+<div class="flex items-center gap-2 font-body-sm text-body-sm text-secondary">
+<span class="material-symbols-outlined text-sm">developer_board</span> Multi-stage Docker Builds
+            </div>
+</div>
+</div>
+<div class="pt-4 mt-4 flex items-center justify-between text-on-surface-variant font-label-sm text-label-sm">
+<span>Score Delta:</span>
+<span class="font-code-score text-code-score text-secondary font-bold">+7.5%</span>
+</div>
+</div>
+</div>
+</section>
+<!-- Best-Fit Alternative Job Recommendations -->
+<section class="bg-surface-container-lowest p-6 rounded-xl shadow-sm">
+<div class="flex flex-col md:flex-row md:items-center justify-between gap-4 mb-6">
+<div>
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary text-xl">swap_calls</span>
+<h3 class="font-headline-md text-headline-md text-on-surface">Best-Fit Alternative Openings</h3>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1">Cross-referencing Ananya's matched profile against parallel enterprise job descriptions.</p>
+</div>
+<button class="px-3 py-1.5 rounded bg-surface-container text-on-surface font-label-md text-label-md hover:bg-surface-container-high transition-colors" type="button">
+        View All 14 Matches
+      </button>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+<!-- Role 1: Junior Backend Engineer -->
+<div class="p-4 rounded-lg bg-surface-container-low hover:bg-surface-container transition-all flex flex-col justify-between">
+<div>
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm px-2 py-0.5 rounded-full bg-surface-container-highest text-secondary font-semibold font-code-metric">HIGH FIT</span>
+<span class="font-headline-sm text-headline-sm text-secondary font-code-score">82.0%</span>
+</div>
+<h5 class="font-headline-sm text-headline-sm text-on-surface mt-2">Junior Backend Engineer</h5>
+<span class="font-body-sm text-body-sm text-on-surface-variant block">Meta · Infrastructure Tools</span>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-3">
+            Heavy emphasis on Python, OOP (Java), and SQL schemas without ML prerequisites.
+          </p>
+</div>
+<div class="pt-4 mt-3 flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-on-surface font-semibold">Immediate Routing</span>
+<button class="p-1 rounded text-secondary hover:bg-surface-container-highest" type="button">
+<span class="material-symbols-outlined text-base">arrow_forward</span>
+</button>
+</div>
+</div>
+<!-- Role 2: Data Analyst Intern -->
+<div class="p-4 rounded-lg bg-surface-container-low hover:bg-surface-container transition-all flex flex-col justify-between">
+<div>
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm px-2 py-0.5 rounded-full bg-surface-container-highest text-secondary font-semibold font-code-metric">MODERATE-HIGH</span>
+<span class="font-headline-sm text-headline-sm text-on-surface font-code-score">78.0%</span>
+</div>
+<h5 class="font-headline-sm text-headline-sm text-on-surface mt-2">Data Analyst Intern</h5>
+<span class="font-body-sm text-body-sm text-on-surface-variant block">Stripe · Revenue Operations</span>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-3">
+            Directly aligns with demonstrated SQL database design and Python scripting portfolio.
+          </p>
+</div>
+<div class="pt-4 mt-3 flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-on-surface font-semibold">Eligible (Fast Track)</span>
+<button class="p-1 rounded text-secondary hover:bg-surface-container-highest" type="button">
+<span class="material-symbols-outlined text-base">arrow_forward</span>
+</button>
+</div>
+</div>
+<!-- Role 3: Cloud Solutions Associate -->
+<div class="p-4 rounded-lg bg-surface-container-low hover:bg-surface-container transition-all flex flex-col justify-between">
+<div>
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm px-2 py-0.5 rounded-full bg-surface-container text-outline font-semibold font-code-metric">LOWER ALIGNMENT</span>
+<span class="font-headline-sm text-headline-sm text-outline font-code-score">52.0%</span>
+</div>
+<h5 class="font-headline-sm text-headline-sm text-on-surface mt-2">Cloud Solutions Associate</h5>
+<span class="font-body-sm text-body-sm text-on-surface-variant block">Amazon Web Services · Partner Support</span>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-3">
+            Requires active AWS and Docker certifications currently absent from profile.
+          </p>
+</div>
+<div class="pt-4 mt-3 flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-outline">Upskill Required</span>
+<button class="p-1 rounded text-outline hover:bg-surface-container-highest" type="button">
+<span class="material-symbols-outlined text-base">arrow_forward</span>
+</button>
+</div>
+</div>
+</div>
+</section>
+</div>
+<script>
+  function runScoreSimulator() {
+    var mlChecked = document.getElementById('simML').checked;
+    var awsChecked = document.getElementById('simAWS').checked;
+    var dockerChecked = document.getElementById('simDocker').checked;
+
+    var baseScore = 60.0;
+    var added = 0.0;
+
+    if (mlChecked) added += 17.5;
+    if (awsChecked) added += 7.5;
+    if (dockerChecked) added += 7.5;
+
+    var simulatedTotal = baseScore + added;
+    var rounded = simulatedTotal.toFixed(1);
+
+    var resultEl = document.getElementById('simulatedResult');
+    var tierEl = document.getElementById('simTierLabel');
+    var narrativeEl = document.getElementById('simNarrative');
+
+    resultEl.innerText = rounded + '%';
+
+    if (simulatedTotal >= 85.0) {
+      tierEl.innerText = 'Tier 1 Top Candidate (Direct Hire)';
+      tierEl.className = 'font-code-metric text-label-md px-3 py-1 rounded-full bg-secondary text-on-secondary font-semibold';
+      narrativeEl.innerText = 'Acquiring Machine Learning and Cloud services lifts Ananya to the top 5% of candidate pools.';
+    } else if (simulatedTotal >= 75.0) {
+      tierEl.innerText = 'Tier 1 Clear Candidate';
+      tierEl.className = 'font-code-metric text-label-md px-3 py-1 rounded-full bg-secondary-container text-on-secondary-container font-semibold';
+      narrativeEl.innerText = 'Strong qualification threshold cleared. Interview recommendation authorized.';
+    } else if (simulatedTotal > 60.0) {
+      tierEl.innerText = 'Tier 2 Progressive Candidate';
+      tierEl.className = 'font-code-metric text-label-md px-3 py-1 rounded-full bg-surface-container-highest text-on-surface font-semibold';
+      narrativeEl.innerText = 'Moderate uplift detected. Critical ML gap partially or fully compensated.';
+    } else {
+      tierEl.innerText = 'Baseline Tier 2 Candidate';
+      tierEl.className = 'font-code-metric text-label-md px-3 py-1 rounded-full bg-primary-container text-on-primary-container';
+      narrativeEl.innerText = 'Select learning pathways to project Ananya\'s placement readiness.';
+    }
+  }
+</script></main></div></body></html>

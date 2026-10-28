@@ -1,0 +1,11 @@
+{
+  "name": "radix-talent-match-skillsight-ai-platform",
+  "version": "2.4.0",
+  "description": "RADIX Talent Match & SkillSight AI Platform - Complete Functional Web Application",
+  "scripts": {
+    "dev": "npm --prefix frontend run dev",
+    "build": "npm --prefix frontend run build",
+    "start:backend": "python -m uvicorn backend.main:app --reload --port 8000",
+    "test:backend": "pytest backend"
+  }
+}

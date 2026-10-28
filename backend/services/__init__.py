@@ -1,0 +1,7 @@
+from services.normalization import normalize_skill, normalize_skills, skills_match
+from services.scoring import calculate_weighted_score, build_explainability_matrix
+from services.simulator import run_simulation
+from services.recommendations import generate_learning_roadmap, rank_best_fit_jobs
+from services.jd_analyzer import analyze_job_description
+from services.resume_parser import extract_text_from_file, parse_resume_content
+from services.talent_checker import evaluate_talent_eligibility
